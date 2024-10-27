@@ -18,10 +18,10 @@ const DrawerMenu = () => {
   };
 
   const sectionLinks = [
-    { text: "Inicio", id: "home", icon: <FaHome /> },
-    { text: "Servicios", id: "services", icon: <FaCog /> },
-    { text: "Sobre Nosotros", id: "about", icon: <FaInfoCircle /> },
-    { text: "Contacto", id: "contact", icon: <FaEnvelope /> },
+    { text: "Home", id: "home", icon: <FaHome /> },
+    { text: "Services", id: "services", icon: <FaCog /> },
+    { text: "About us", id: "about", icon: <FaInfoCircle /> },
+    { text: "Contact", id: "contact", icon: <FaEnvelope /> },
   ];
 
   const DrawerList = (

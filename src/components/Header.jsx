@@ -37,25 +37,25 @@ const Header = () => {
               href="#inicio"
               className="hover:text-gray-500 text-xl font-semibold"
             >
-              Inicio
+              Home
             </a>
             <a
               href="#services"
               className="hover:text-gray-500 text-xl font-semibold"
             >
-              Servicios
+              Services
             </a>
             <a
               href="#about"
               className="hover:text-gray-500 text-xl font-semibold"
             >
-              Sobre Nosotros
+              About us
             </a>
             <a
               href="#contact"
               className="hover:text-gray-500 text-xl font-semibold"
             >
-              Contacto
+              Contact
             </a>
           </nav>
         )}

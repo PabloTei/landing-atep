@@ -22,9 +22,6 @@ const App = () => {
       <div className="scroll-smooth">
         <Header />
         <TextParallaxContentExample />
-        <Hero />
-        <About />
-        <Contact />
         <Footer />
       </div>
     </div>

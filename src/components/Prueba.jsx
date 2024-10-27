@@ -1,32 +1,41 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import Header from "./Header";
 import Services from "./Services";
+import About from "./About";
+import Contact from "./Contact";
+import Hero from "./Hero";
 
 export const TextParallaxContentExample = () => {
   return (
     <div>
       <TextParallaxContent
         imgUrl="https://res.cloudinary.com/depifliz3/image/upload/v1706641232/ATEP-CONSULTING/scott-graham-5fNmWej4tAA-unsplash_utll5j.jpg"
-        subheading="ATEP-Consulting"
-        heading="Built for all of us."
+        subheading="Assistance"
+        heading="Guiding your success."
       >
-        <ExampleContent />
+        <Hero />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Quality"
-        heading="Never compromise."
+        subheading="Trust"
+        heading="Built on integrity."
       >
         <Services />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        subheading="Modern"
-        heading="Dress for the best."
+        subheading="Excellence"
+        heading="Unmatched quality."
       >
-        <ExampleContent />
+        <About />
+      </TextParallaxContent>
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        subheading="Professionalism"
+        heading="Expert advice."
+      >
+        <Contact />
       </TextParallaxContent>
     </div>
   );

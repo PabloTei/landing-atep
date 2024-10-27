@@ -1,13 +1,12 @@
 import React from "react";
-import { FaCameraRetro } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { SlNote } from "react-icons/sl";
 import {
   MdInstallDesktop,
   MdSupportAgent,
   MdModelTraining,
 } from "react-icons/md";
 import { GrVmMaintenance } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
@@ -46,29 +45,48 @@ const Services = () => {
       <div className="py-12 sm:grid sm:place-items-center">
         <div className="container">
           <div className="pb-12 text-center space-y-3">
-            <h1 className="text-3xl font-semibold ">Explore Our Services</h1>
-            <p>
+            <motion.h1
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-semibold "
+            >
+              Explore Our Services
+            </motion.h1>
+            <motion.p
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+            >
               We are self-service data analytics software that lets you create
               visually.
-            </p>
+            </motion.p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {servicesData.map((skill) => (
-              <div
+              <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 1 }}
                 key={skill.name}
-                className="card space-y-3 sm:space-y-4 p-4 bg-gray-50 hover:shadow-md transition-shadow duration-300"
+                className="card space-y-3 sm:space-y-4 p-4 bg-gray-50 rounded-xl hover:shadow-md transition-shadow duration-300"
               >
                 <div>{skill.icon}</div>
                 <h1 className="text-lg font-semibold">{skill.name}</h1>
                 <p className="text-gray-600">{skill.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-          <div className="flex md:justify-center justify-start">
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            className="flex md:justify-center justify-start"
+          >
             <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit my-12">
               More information <FiArrowUpRight className="inline" />
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
