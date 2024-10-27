@@ -44,7 +44,7 @@ const About = () => {
 
   return (
     <>
-      <div className="py-10 sm:grid sm:place-items-center">
+      <div className="py-10 sm:grid sm:place-items-center mb-20">
         <div className="container">
           <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
             <motion.h1
@@ -60,7 +60,7 @@ const About = () => {
               initial={{ opacity: 0, y: 100 }}
               transition={{ duration: 1 }}
             >
-              <Slider className="bg-gray-50 rounded-xl" {...settings}>
+              <Slider {...settings}>
                 {values.map((value) => (
                   <div key={value.name} className="my-6">
                     <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl relative">
