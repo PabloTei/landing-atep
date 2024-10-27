@@ -6,33 +6,34 @@ import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
 import Header from "./Header";
+import { IMAGES } from "../constants/data.js";
 
 export const TextParallaxContentExample = () => {
   return (
     <div>
       <TextParallaxContent
-        imgUrl="https://res.cloudinary.com/depifliz3/image/upload/v1706641232/ATEP-CONSULTING/scott-graham-5fNmWej4tAA-unsplash_utll5j.jpg"
+        imgUrl={IMAGES.assistance}
         subheading="Assistance"
         heading="Guiding your success."
       >
         <Hero />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={IMAGES.trust}
         subheading="Trust"
         heading="Built on integrity."
       >
         <Services />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={IMAGES.excellence}
         subheading="Excellence"
         heading="Unmatched quality."
       >
         <About />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl={IMAGES.professionality}
         subheading="Professionalism"
         heading="Expert advice."
       >
