@@ -5,6 +5,7 @@ import Services from "./Services";
 import About from "./About";
 import Contact from "./Contact";
 import Hero from "./Hero";
+import Header from "./Header";
 
 export const TextParallaxContentExample = () => {
   return (
@@ -13,6 +14,7 @@ export const TextParallaxContentExample = () => {
         imgUrl="https://res.cloudinary.com/depifliz3/image/upload/v1706641232/ATEP-CONSULTING/scott-graham-5fNmWej4tAA-unsplash_utll5j.jpg"
         subheading="Assistance"
         heading="Guiding your success."
+        topContent={<Header />}
       >
         <Hero />
       </TextParallaxContent>
@@ -43,7 +45,13 @@ export const TextParallaxContentExample = () => {
 
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+const TextParallaxContent = ({
+  imgUrl,
+  subheading,
+  heading,
+  children,
+  topContent,
+}) => {
   return (
     <div
       style={{
@@ -53,7 +61,11 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     >
       <div className="relative">
         <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy heading={heading} subheading={subheading} />
+        <OverlayCopy
+          heading={heading}
+          subheading={subheading}
+          topContent={topContent}
+        />
       </div>
       {children}
     </div>
@@ -93,7 +105,7 @@ const StickyImage = ({ imgUrl }) => {
   );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
+const OverlayCopy = ({ subheading, heading, topContent }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -112,6 +124,7 @@ const OverlayCopy = ({ subheading, heading }) => {
       ref={targetRef}
       className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
     >
+      {topContent && <div className="absolute top-0 w-full">{topContent}</div>}
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subheading}
       </p>
@@ -119,28 +132,5 @@ const OverlayCopy = ({ subheading, heading }) => {
     </motion.div>
   );
 };
-
-const ExampleContent = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      Additional content explaining the above card here
-    </h2>
-    <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
-      </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
-    </div>
-  </div>
-);
 
 export default TextParallaxContentExample;
