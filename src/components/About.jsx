@@ -55,6 +55,17 @@ const About = () => {
             >
               About us
             </motion.h1>
+            <motion.p
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              className="text-center"
+            >
+              <span className="font-bold">ATEP Consulting</span> is your trusted
+              partner in navigating complex challenges, offering expert guidance
+              and innovative strategies tailored to your business needs. We’re
+              here to help you unlock potential and achieve sustainable success.
+            </motion.p>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 100 }}

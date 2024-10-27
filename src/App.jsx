@@ -22,6 +22,7 @@ const App = () => {
       <div className="scroll-smooth">
         <Header />
         <TextParallaxContentExample />
+        {/* <div className="my-10 mx-auto h-[1px] w-3/4 bg-gray-200"></div> */}
         <Footer />
       </div>
     </div>

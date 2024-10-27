@@ -2,12 +2,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-center">
-      <p className="text-sm">
-        &copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos
-        reservados.
-      </p>
-      <div className="flex justify-center gap-4 mt-4">
+    <footer className="py-10 bg-gray-100">
+      <div className="flex justify-between items-center mx-auto w-3/4">
+        <img
+          src="https://res.cloudinary.com/depifliz3/image/upload/v1706638374/ATEP-CONSULTING/1_i0r28w.png"
+          className="h-12"
+          alt="Company Logo"
+        />
+        <p className="text-sm">
+          &copy; Copyright {new Date().getFullYear()} – ATEP-Consulting.com ®
+        </p>
+        {/* <div className="flex justify-center gap-4 mt-4">
         <a
           href="https://linkedin.com"
           target="_blank"
@@ -35,6 +40,7 @@ const Footer = () => {
         >
           Twitter
         </a>
+      </div> */}
       </div>
     </footer>
   );
