@@ -21,7 +21,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 px-4">
       <div className="container mx-auto flex justify-between items-center md:py-4">
         <img
           src="https://res.cloudinary.com/depifliz3/image/upload/v1706638374/ATEP-CONSULTING/1_i0r28w.png"
