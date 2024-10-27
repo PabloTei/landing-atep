@@ -20,6 +20,7 @@ const App = () => {
     <div className="overflow-x-hidden text-gray-700 antialiased">
       <BackgroundPattern />
       <div className="scroll-smooth">
+        <Header />
         <TextParallaxContentExample />
         <Footer />
       </div>

@@ -14,7 +14,6 @@ export const TextParallaxContentExample = () => {
         imgUrl="https://res.cloudinary.com/depifliz3/image/upload/v1706641232/ATEP-CONSULTING/scott-graham-5fNmWej4tAA-unsplash_utll5j.jpg"
         subheading="Assistance"
         heading="Guiding your success."
-        topContent={<Header />}
       >
         <Hero />
       </TextParallaxContent>
