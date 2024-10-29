@@ -29,7 +29,7 @@ const DrawerMenu = () => {
       <List>
         {sectionLinks.map(({ text, id, icon }) => (
           <ListItem key={id} disablePadding>
-            <ListItemButton component="a" href={`#${id}`}>
+            <ListItemButton className="text-xl" component="a" href={`#${id}`}>
               <ListItemIcon>{icon}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
