@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     <>
-      <div className="py-10 sm:grid sm:place-items-center mb-20">
+      <div id="about" className="py-10 sm:grid sm:place-items-center mb-20">
         <div className="container">
           <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
             <motion.h1

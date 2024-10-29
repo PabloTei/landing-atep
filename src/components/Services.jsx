@@ -42,7 +42,7 @@ const servicesData = [
 const Services = () => {
   return (
     <>
-      <div className="py-12 sm:grid sm:place-items-center">
+      <div id="services" className="py-12 sm:grid sm:place-items-center">
         <div className="container">
           <div className="pb-12 text-center space-y-3">
             <motion.h1
