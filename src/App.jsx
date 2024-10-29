@@ -17,7 +17,7 @@ const BackgroundPattern = () => (
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden text-gray-700 antialiased">
+    <div className="overflow-x-hidden text-neutral-700 antialiased">
       <BackgroundPattern />
       <div className="scroll-smooth">
         <Header />

@@ -1,4 +1,3 @@
-// src/components/DrawerMenu.js
 import React, { useState } from "react";
 import { FaHome, FaCog, FaInfoCircle, FaEnvelope } from "react-icons/fa";
 import Box from "@mui/material/Box";
@@ -9,6 +8,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import AnimatedHamburgerButton from "../ui/ButtonMenu";
+import { motion } from "framer-motion";
 
 const DrawerMenu = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -26,16 +26,22 @@ const DrawerMenu = () => {
 
   const DrawerList = (
     <Box sx={{ width: 240 }} role="presentation" onClick={toggleDrawer}>
-      <List>
-        {sectionLinks.map(({ text, id, icon }) => (
-          <ListItem key={id} disablePadding>
-            <ListItemButton className="text-xl" component="a" href={`#${id}`}>
-              <ListItemIcon>{icon}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+      >
+        <List>
+          {sectionLinks.map(({ text, id, icon }) => (
+            <ListItem key={id} disablePadding>
+              <ListItemButton className="text-xl" component="a" href={`#${id}`}>
+                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </motion.div>
     </Box>
   );
 

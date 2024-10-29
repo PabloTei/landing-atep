@@ -51,7 +51,7 @@ const About = () => {
             <motion.h1
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               className="text-3xl font-semibold text-center"
             >
               About us
@@ -75,15 +75,15 @@ const About = () => {
               <Slider {...settings}>
                 {values.map((value) => (
                   <div key={value.name} className="my-6">
-                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded-xl relative group">
+                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded relative group">
                       <img
-                        className="block mx-auto h-[300px] w-full sm:w-[300px] object-cover rounded-xl filter grayscale group-hover:filter-none transition-all duration-300"
+                        className="block mx-auto h-[300px] w-full sm:w-[300px] object-cover rounded filter grayscale group-hover:filter-none transition-all duration-300"
                         src={value.img}
                         alt={value.name}
                       />
                       <div className="space-y-4">
                         <h2 className="text-xl font-bold">{value.name}</h2>
-                        <p className="text-gray-500 text-black/80 xl:pr-40">
+                        <p className="text-neutral-500 text-black/80 xl:pr-40">
                           {value.text}
                         </p>
                       </div>

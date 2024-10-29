@@ -48,7 +48,7 @@ const Services = () => {
             <motion.h1
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               className="text-3xl font-semibold "
             >
               Explore Our Services
@@ -69,11 +69,11 @@ const Services = () => {
                 initial={{ opacity: 0, x: 100 }}
                 transition={{ duration: 1 }}
                 key={skill.name}
-                className="card space-y-3 sm:space-y-4 p-4 bg-gray-50 rounded-xl hover:shadow-md transition-shadow duration-300"
+                className="card space-y-3 sm:space-y-4 p-4 bg-neutral-50 rounded hover:shadow-md transition-shadow duration-300"
               >
                 <div>{skill.icon}</div>
                 <h1 className="text-lg font-semibold">{skill.name}</h1>
-                <p className="text-gray-600">{skill.description}</p>
+                <p className="text-neutral-600">{skill.description}</p>
               </motion.div>
             ))}
           </div>
@@ -81,9 +81,9 @@ const Services = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1 }}
-            className="flex md:justify-center justify-start"
+            className="flex justify-center"
           >
-            <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit my-12">
+            <button className="rounded bg-neutral-700 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-800 md:w-fit my-12">
               More information <FiArrowUpRight className="inline" />
             </button>
           </motion.div>

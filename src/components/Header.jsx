@@ -33,16 +33,16 @@ const Header = () => {
           <DrawerMenu open={drawerOpen} toggleDrawer={toggleDrawer} />
         ) : (
           <nav className="space-x-10">
-            <a href="#inicio" className="hover:text-gray-500 text-md">
+            <a href="#inicio" className="hover:text-neutral-500 text-md">
               Home
             </a>
-            <a href="#services" className="hover:text-gray-500 text-md">
+            <a href="#services" className="hover:text-neutral-500 text-md">
               Services
             </a>
-            <a href="#about" className="hover:text-gray-500 text-md">
+            <a href="#about" className="hover:text-neutral-500 text-md">
               About us
             </a>
-            <a href="#contact" className="hover:text-gray-500 text-md">
+            <a href="#contact" className="hover:text-neutral-500 text-md">
               Contact
             </a>
           </nav>
