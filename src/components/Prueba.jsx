@@ -54,10 +54,10 @@ const TextParallaxContent = ({
 }) => {
   return (
     <div
-      style={{
-        paddingLeft: IMG_PADDING,
-        paddingRight: IMG_PADDING,
-      }}
+    // style={{
+    //   paddingLeft: IMG_PADDING,
+    //   paddingRight: IMG_PADDING,
+    // }}
     >
       <div className="relative">
         <StickyImage imgUrl={imgUrl} />
@@ -93,7 +93,7 @@ const StickyImage = ({ imgUrl }) => {
         scale,
       }}
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
+      className="sticky z-0 overflow-hidden "
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"
