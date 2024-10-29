@@ -32,17 +32,29 @@ const Header = () => {
         {isMobile ? (
           <DrawerMenu open={drawerOpen} toggleDrawer={toggleDrawer} />
         ) : (
-          <nav className="space-x-10">
-            <a href="#inicio" className="hover:text-neutral-500 text-md">
+          <nav className="space-x-10 flex">
+            <a
+              href="#inicio"
+              className="relative text-md  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-neutral-500 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
               Home
             </a>
-            <a href="#services" className="hover:text-neutral-500 text-md">
+            <a
+              href="#services"
+              className="relative text-md after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-neutral-500 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
               Services
             </a>
-            <a href="#about" className="hover:text-neutral-500 text-md">
+            <a
+              href="#about"
+              className="relative text-md  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-neutral-500 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
               About us
             </a>
-            <a href="#contact" className="hover:text-neutral-500 text-md">
+            <a
+              href="#contact"
+              className="relative text-md  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-neutral-500 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
               Contact
             </a>
           </nav>
