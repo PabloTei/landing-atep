@@ -40,7 +40,7 @@ const Contact = () => {
             className="w-full p-4 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-400 transition-all placeholder-neutral-400 h-40 resize-none"
           ></textarea>
 
-          <button className="w-full bg-neutral-700 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-800 md:w-fit my-12">
+          <button className="w-full rounded bg-neutral-700 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-800 my-12">
             Submit <IoIosSend className="inline" />
           </button>
         </form>
