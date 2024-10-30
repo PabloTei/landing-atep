@@ -1,20 +1,36 @@
 import React from "react";
 import { IoIosSend } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <section id="contact" className="pt-16 pb-20">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-extrabold mb-4 text-neutral-800">
+        <motion.h2
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="text-4xl font-extrabold mb-4 text-neutral-800"
+        >
           Contact Us
-        </h2>
-        <p className="text-neutral-600 mb-12 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          className="text-neutral-600 mb-12 max-w-2xl mx-auto"
+        >
           If you wish to contact us you can do so through our contact
           information. If you prefer, you can do so by filling out the form. We
           will contact you as soon as possible.
-        </p>
+        </motion.p>
 
-        <form className="max-w-lg mx-auto space-y-6 bg-neutral-50 p-8 rounded shadow-lg">
+        <motion.form
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1 }}
+          className="max-w-lg mx-auto space-y-6 bg-neutral-50 p-8 rounded shadow-lg"
+        >
           <input
             type="text"
             placeholder="Your Name"
@@ -43,7 +59,7 @@ const Contact = () => {
           <button className="w-full rounded bg-neutral-700 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-800 my-12">
             Submit <IoIosSend className="inline" />
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );
