@@ -32,7 +32,12 @@ const Hero = () => {
           More information <FiArrowUpRight className="inline" />
         </motion.button>
       </div>
-      <motion.div className="pb-12 text-center space-y-3">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+        className="pb-12 text-center space-y-3"
+      >
         <h1 className="text-4xl font-extrabold mb-4 text-neutral-800">
           Our clients
         </h1>
