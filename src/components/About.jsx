@@ -46,7 +46,7 @@ const About = () => {
   return (
     <>
       <div id="about" className="py-12 sm:grid sm:place-items-center mb-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 max-w-screen-xl mx-auto">
             <motion.h1
               whileInView={{ opacity: 1, y: 0 }}
