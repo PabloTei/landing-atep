@@ -8,8 +8,8 @@ const Hero = () => {
     <section id="inicio" className=" py-20">
       <div className="container mx-auto text-center">
         <motion.h1
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
           className="text-7xl sm:text-8xl font-bold mb-3 bg-gradient-to-r from-neutral-400 to-neutral-900 bg-clip-text tracking-tight text-transparent pb-1.5	"
         >
@@ -32,25 +32,13 @@ const Hero = () => {
           More information <FiArrowUpRight className="inline" />
         </motion.button>
       </div>
-      <div className="pb-12 text-center space-y-3">
-        <motion.h1
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="text-4xl font-extrabold mb-4 text-neutral-800"
-        >
+      <motion.div className="pb-12 text-center space-y-3">
+        <h1 className="text-4xl font-extrabold mb-4 text-neutral-800">
           Our clients
-        </motion.h1>
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 1 }}
-          className="pb-8"
-        >
-          Powering next-gen companies
-        </motion.p>
+        </h1>
+        <p className="pb-8">Powering next-gen companies</p>
         <BrandLogo />
-      </div>
+      </motion.div>
     </section>
   );
 };
