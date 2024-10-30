@@ -49,7 +49,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
-              className="text-3xl font-semibold "
+              className="text-4xl font-extrabold mb-4 text-neutral-800"
             >
               Explore Our Services
             </motion.h1>

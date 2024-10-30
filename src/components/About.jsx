@@ -45,14 +45,14 @@ const About = () => {
 
   return (
     <>
-      <div id="about" className="py-10 sm:grid sm:place-items-center mb-20">
+      <div id="about" className="py-12 sm:grid sm:place-items-center mb-20">
         <div className="container">
           <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
             <motion.h1
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1 }}
-              className="text-3xl font-semibold text-center"
+              className="text-4xl font-extrabold text-center mb-4 text-neutral-800"
             >
               About us
             </motion.h1>
@@ -60,7 +60,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="text-center"
+              className="text-neutral-600 mb-12 max-w-2xl mx-auto text-center"
             >
               <span className="font-bold">ATEP Consulting</span> is your trusted
               partner in navigating complex challenges, offering expert guidance
