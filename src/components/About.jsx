@@ -44,58 +44,57 @@ const About = () => {
   };
 
   return (
-    <>
-      <div id="about" className="py-12 sm:grid sm:place-items-center mb-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 max-w-screen-xl mx-auto">
-            <motion.h1
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1 }}
-              className="text-4xl font-extrabold text-center mb-4 text-neutral-800"
-            >
-              About Us
-            </motion.h1>
-            <motion.p
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              transition={{ duration: 1 }}
-              className="text-neutral-600 mb-12 max-w-2xl mx-auto text-center"
-            >
-              <span className="font-bold">ATEP Consulting</span> is your trusted
-              partner in navigating complex challenges, offering expert guidance
-              and innovative strategies tailored to your business needs. We’re
-              here to help you unlock potential and achieve sustainable success.
-            </motion.p>
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 100 }}
-              transition={{ duration: 1 }}
-            >
-              <Slider {...settings}>
-                {values.map((value) => (
-                  <div key={value.name} className="my-6">
-                    <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded relative group">
-                      <img
-                        className="block mx-auto h-[300px] w-full sm:w-[300px] object-cover rounded filter grayscale group-hover:filter-none transition-all duration-300"
-                        src={value.img}
-                        alt={value.name}
-                      />
-                      <div className="space-y-4">
-                        <h2 className="text-xl font-bold">{value.name}</h2>
-                        <p className="text-neutral-500 text-black/80 xl:pr-40">
-                          {value.text}
-                        </p>
-                      </div>
+    <div id="about" className="py-12 sm:grid sm:place-items-center mb-20">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 max-w-screen-xl mx-auto">
+          <motion.h1
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            transition={{ duration: 1 }}
+            className="text-4xl font-extrabold text-center mb-4 text-neutral-800"
+          >
+            About Us
+          </motion.h1>
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
+            className="text-neutral-600 mb-12 max-w-2xl mx-auto text-center"
+          >
+            <span className="font-bold">ATEP Consulting</span> is your trusted
+            partner in navigating complex challenges, offering expert guidance
+            and innovative strategies tailored to your business needs. We’re
+            here to help you unlock potential and achieve sustainable success.
+          </motion.p>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1 }}
+          >
+            <Slider {...settings}>
+              {values.map((value) => (
+                <div key={value.name} className="my-6">
+                  <div className="flex flex-col sm:flex-row gap-5 md:gap-14 p-4 mx-4 rounded relative group">
+                    <img
+                      className="block mx-auto h-[300px] w-full sm:w-[300px] object-cover rounded filter grayscale group-hover:filter-none transition-all duration-300"
+                      src={value.img}
+                      alt={value.name}
+                      loading="lazy"
+                    />
+                    <div className="space-y-4">
+                      <h2 className="text-xl font-bold">{value.name}</h2>
+                      <p className="text-neutral-500 text-black/80 xl:pr-40">
+                        {value.text}
+                      </p>
                     </div>
                   </div>
-                ))}
-              </Slider>
-            </motion.div>
-          </div>
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
